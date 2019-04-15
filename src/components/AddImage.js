@@ -176,16 +176,11 @@ class ImageList extends Component {
 
     uploadData = () => {
         this.setState({showLoading : true})
-        let imageCanvas = $('#imageCanvas').clone();
-        $('img', imageCanvas ).remove();
-        let overlayData = imageCanvas.html();
-
 
         this.props.client.mutate({
             mutation: uploadImageData ,
             variables: { 
                 name: this.state.name,
-                overlay: overlayData,
                 width: this.state.width,
                 height: this.state.height,
                 image: this.state.img

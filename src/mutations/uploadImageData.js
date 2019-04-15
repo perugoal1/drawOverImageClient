@@ -15,7 +15,6 @@ export default gql`
     ) {
         id
         name
-        overlay
         width
         height
         url
