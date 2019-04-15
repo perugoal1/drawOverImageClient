@@ -14,9 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 50px
 }
 
 .App-link {
@@ -34,4 +34,74 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.file-area {
+  width: 100%;
+  position: relative;
+}
+.file-area input[type=file] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.file-area .file-dummy {
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+.file-area .file-dummy .success {
+  display: none;
+}
+.file-area:hover .file-dummy {
+  background: rgba(255, 255, 255, 0.1);
+}
+.file-area input[type=file]:focus + .file-dummy {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.file-area input[type=file]:valid + .file-dummy {
+  border-color: rgba(0, 255, 0, 0.4);
+  background-color: rgba(0, 255, 0, 0.3);
+}
+.file-area input[type=file]:valid + .file-dummy .success {
+  display: inline-block;
+}
+.file-area input[type=file]:valid + .file-dummy .default {
+  display: none;
+}
+#canvas {
+  width:2000px;
+  height:2000px;
+  border: 10px solid transparent;
+}
+.rectangle {
+  position: absolute;
+}
+#imageCanvas {
+  margin: auto;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+.mr10{
+  margin-right: 10px
+}
+.mt45{
+  margin-top: 45px
+}
+.imgName{
+  display: block;
+  font-size: 14px;
+  border-bottom: 1px solid white;
+  padding: 5px;
 }

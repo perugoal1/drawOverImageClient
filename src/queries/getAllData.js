@@ -5,7 +5,6 @@ export default gql`
     getAllData {
         id,
         name,
-        overlay,
         width,
         height,
         url 
